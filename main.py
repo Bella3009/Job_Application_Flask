@@ -47,7 +47,7 @@ def index():
         db.session.commit()
 
         msg_body = f"Thank you for your submission, {first_name}.\n"\
-                   f"Here are your data: \n{first_name} {last_name}\n{available}\n"\
+                   f"Here are your data:\n{first_name} {last_name}\n{available}\n"\
                    f"Thank you!"
         message = Message(subject="form submission",
                           sender=app.config["MAIL_USERNAME"],
